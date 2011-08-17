@@ -12,5 +12,5 @@ class Meccs(models.Model):
 	csapat1 = models.ForeignKey(Csapat)	
 	csapat2 = models.ForeignKey(Csapat,related_name='csapat2')
 	date = models.DateTimeField()
-	eredmeny = models.IntegerField()
+	eredmeny = models.CharField(max_length=10)
 	
