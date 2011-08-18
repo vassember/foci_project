@@ -1,0 +1,21 @@
+<h2>Csapatok</h2>
+{% if cs %}
+	{% for cs in cs %}
+		{{cs.name}}
+		{{cs.pont}}
+		<br />
+	{% endfor %}
+{% else %}
+	<p>Nincs csapat</p>
+{% endif %}
+<hr />
+<h2>Meccsek</h2>
+{% if m %}
+	{% for m in m %}
+		{{m.csapat1}} Vs {{m.csapat2}}
+		Eredmény: {{m.eredmeny}}
+		<br />
+	{% endfor %}
+{% else %}
+	<p>Nincs meccs</p>
+{% endif %}
