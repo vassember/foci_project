@@ -1,0 +1,15 @@
+{% if er %}
+	{% for m in m %}
+		{{m.hely}}--{{m.date}}
+		<br />
+		{% for er in er %}
+			{% if er.meccs.hely == m.hely %}
+				{{er.csapat.name}}-{{er.pont}}<br />
+			{% endif %}
+		{% endfor %}
+		<hr />
+	{% endfor %}
+	
+{% else %}
+	Nincs feltölte adatbázis
+{% endif %}

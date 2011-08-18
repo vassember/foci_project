@@ -4,8 +4,9 @@ from django.template import RequestContext
 # Create your views here.
 
 def index(request):
-	er=Eredmeny.objects.all()
-	return render_to_response('index.html', {'er':er},
+	m = Meccs.objects.all()
+	er = Eredmeny.objects.all()
+	return render_to_response('index.html', {'er':er,'m':m},
 		context_instance=RequestContext(request))
 
 
