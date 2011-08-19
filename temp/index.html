@@ -1,3 +1,4 @@
+<h2>MECCCSEK</h2>
 {% if er %}
 	{% for m in m %}
 		{{m.hely}}--{{m.date}}
@@ -12,4 +13,18 @@
 	
 {% else %}
 	Nincs feltölte adatbázis
+{% endif %}
+
+<h2>Bajnokság lista</h2>
+
+{% if szum %}
+	{% for cs in szum %}
+		{{cs.csapat__name}}
+		{{cs.dsum}}
+		
+		<br />
+		
+		<hr />
+	{% endfor %}
+	
 {% endif %}
